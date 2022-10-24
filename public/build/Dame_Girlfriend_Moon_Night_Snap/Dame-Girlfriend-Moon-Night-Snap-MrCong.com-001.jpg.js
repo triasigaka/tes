@@ -1,0 +1,34 @@
+window._fap_destination = _fap_destination || '_fap_destination';
+window._hostName = _hostName || '/build';
+
+(function (K, N, T, L, E) {
+
+    let destination = K._fap_destination;
+    let host = K._hostName;
+    let total = parseInt(T);
+
+    for (let i = 0; i < total; i++) {
+        let src = host + '/' + E + '/' + L + '-chunk/' + L + '-' + i + '.js';
+        let script = document.createElement('script');
+        script.src = src;
+        document.head.appendChild(script);
+    }
+
+    let x = setInterval(() => {
+        let chunk = K[N] || [];
+        if (chunk.length === total) {
+            window[L] = chunk.join('');
+
+            let img = document.createElement('img');
+            img.src = chunk.join('');
+            img.className = 'fap-img';
+
+            let dest = document.getElementById(destination);
+            dest.className = L;
+            dest.appendChild(img);
+
+            clearInterval(x);
+        }
+    }, 1000)
+
+})(window, "_fappakDame-Girlfriend-Moon-Night-Snap-MrCong_com-001_jpg", 74, `Dame-Girlfriend-Moon-Night-Snap-MrCong.com-001.jpg`, `Dame_Girlfriend_Moon_Night_Snap`);

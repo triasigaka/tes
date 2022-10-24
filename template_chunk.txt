@@ -1,0 +1,1 @@
+(window[{{packName}}]=window[{{packName}}]||[])[{{key}}] = {{data}};
